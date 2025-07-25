@@ -1,78 +1,118 @@
-# 🧪 Developer Test Assignment: SEO-Optimized Local Business Website
+# 🧪 Practical Assessment: SEO-Optimized Local Business Website Build
 
-Welcome! This assignment is part of the evaluation process for a role at our agency. You will have **24 hours** to complete the task once we give you the green light to begin.
+## 📋 Overview
+
+This assignment is part of our evaluation for the **SEO/Web Developer** role. You will build a modern, SEO-friendly marketing website for a fictional local business using the provided Next.js starter repo.
+
+The goal is to evaluate how you design, develop, and optimize a real-world website independently — from structure to SEO and performance.
+
+> ⏱️ **You have 24 hours to complete this task once you begin.**
 
 ---
 
-## 🧾 The Scenario
+## 🛠 Setup
 
-Build a modern, SEO-optimized marketing website for a fictional local business:
+You will work inside the public GitHub repo:  
+🔗 **Repo URL**: [https://github.com/FlorentGashi/dblseo-assignment](https://github.com/FlorentGashi/dblseo-assignment)
+
+The repo contains:
+- A basic **Next.js (v14+)** project with **shadcn UI** installed
+- No pages or components beyond a starter scaffold
+
+> **Your job:** Build the website from the ground up.
+
+---
+
+## 🎯 Your Task
+
+Build a complete, multi-page **SEO-optimized** marketing website for:
 
 - **Business Name**: ABC Plumber  
 - **Location**: Austin, TX  
-- **Industry**: Residential Plumbing Services  
+- **Industry**: Residential Plumbing Services
 
-You may assume the business offers typical services such as:
-
+The business offers typical plumbing services such as:
 - Drain Cleaning  
 - Water Heater Repair & Installation  
 - Leak Detection  
-- Emergency Plumbing
+- Emergency Plumbing  
+
+---
+
+## 📄 Required Sections/Pages
+
+### ✅ Homepage
+- **Header**: Logo + CTA + menu (applied site-wide)  
+- **Body**: Hero + Overview + Main Services + Features + Blog Section + CTA  
+- **Footer**: 4 Columns  
+  - About Us (short description)  
+  - Quick Links  
+  - Contact Us (fictional info + social media icons)  
+  - Embedded Google Map  
+
+### ✅ Service Pages
+- At least **2 individual service pages**
+- A **main services hub page** with dropdown navigation
+
+### ✅ About Page
+- Company story, mission, values
+
+### ✅ Contact Page
+- Fake/placeholder contact form
+
+### ✅ 404 Page
+- Custom, SEO-friendly 404 page
 
 ---
 
 ## ✅ What We’re Looking For
 
-We want to see how you **think, structure, and execute** independently. This is not a step-by-step tutorial — treat it like a real-world project. Your deliverable should demonstrate:
+- Clean, **responsive design (mobile-first)** using **shadcn UI** + **Tailwind CSS**
+- On-page **SEO best practices**:
+  - Meta titles & descriptions
+  - Logical URL structure & hierarchy
+  - Crawlability & indexation
+  - XML sitemap
+  - Semantic HTML5
+  - Internal + external linking
+  - Schema markup (JSON-LD)
+  - Open Graph tags for sharing
 
-- Clean, responsive design (**mobile-first**)  
-- Solid **on-page SEO** implementation  
-- Clear **page structure and content hierarchy**  
-- **Fast performance** and optimized assets  
-- Clean, organized, and readable **codebase**  
-- **Reusable components** (if applicable)  
-- Basic **internal linking** and navigation  
-
----
-
-## 📄 Required Pages
-
-Please include the following pages in your project:
-
-- `Home`  
-- At least **2 individual service pages**  
-- `About`  
-- `Contact` (form can be a placeholder)  
-- Custom `404` page  
+- Fast performance (lazy loading, image optimization, etc.)
+- Reusable components, clean architecture
+- Realistic, **human-like placeholder content** (no Lorem Ipsum)
 
 ---
 
-## 🧠 Key Considerations
+## 🧠 Additional Guidelines
 
-- Treat this like a **real-world client deliverable**  
-- Follow **SEO best practices**:
-  - Unique and relevant `<title>` and `<meta description>` per page  
-  - Proper **semantic HTML**  
-  - Clear heading structure (H1, H2, etc.)  
-  - Structured content and **internal links**  
-- Placeholder content is fine — just keep it **realistic and relevant**  
-- Make your own decisions on structure, styling, and content strategy  
+- You may use **AI tools** to generate content, but polish it for quality
+- Make your own design/styling/content structure decisions
+- Focus on **real-world UX & SEO best practices**
+- Optimize images and lazy-load large assets where applicable
 
 ---
 
-## 📦 Deliverables
+## 📦 Deliverables (Due in 24 Hours)
 
-Please submit the following:
-
-- A **GitHub repository** with your full code  
-- A `README.md` file that includes:
-  - A short description of your approach  
-  - Any assumptions, notes, or limitations  
-  - (Optional) A **live deployment** link (e.g. Vercel, Netlify)  
+- Create a new **public GitHub repo** and push your complete project
+- Include a `README.md` update with:
+  - Short description of your approach  
+  - Any assumptions or implementation notes  
+  - How you implemented SEO (meta tags, JSON-LD, Open Graph, etc.)  
+  - *(Optional)* Link to a live deployment  
 
 ---
 
-## ⏱ Deadline
+## 🧪 What We’re Evaluating
 
-You have **24 hours** from the time we confirm the start.  
-Good luck — we’re excited to see your work!
+- Your ability to deliver a **functional, SEO-optimized website**
+- Understanding of **SEO fundamentals** & semantic HTML
+- Effective use of **Next.js** and reusable components
+- **Clean code**, responsive layout, good UX
+- Creativity & independent problem-solving
+
+---
+
+> 🎯 Good luck!  
+Treat this like a real client project — we're excited to see your best work.
