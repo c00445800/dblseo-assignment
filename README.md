@@ -1,86 +1,78 @@
-# 🧪 SEO & Web Developer Assignment
+# 🧪 Developer Test Assignment: SEO-Optimized Local Business Website
 
-Welcome! This is a take-home assignment for the SEO & Web Developer position.
-
-Your task is to build a fully functional, SEO-optimized website for a local plumbing business using **Next.js** and deploy it via **Vercel**.
+Welcome! This assignment is part of the evaluation process for a role at our agency. You will have **24 hours** to complete the task once we give you the green light to begin.
 
 ---
 
-## 🧑‍🔧 Business Details
+## 🧾 The Scenario
 
-- **Business Name**: ABC Plumbing  
-- **Location**: Austin, Texas  
-- **Services Offered**:
-  1. Drain Cleaning  
-  2. Water Heater Installation  
-  3. Emergency Plumbing Repairs
+Build a modern, SEO-optimized marketing website for a fictional local business:
 
----
+- **Business Name**: ABC Plumber  
+- **Location**: Austin, TX  
+- **Industry**: Residential Plumbing Services  
 
-## ✅ Goal
+You may assume the business offers typical services such as:
 
-We want to see your ability to create clean, performant code **and** implement strong **on-page SEO** foundations. Treat this like a real client project.
-
----
-
-## 🔧 Technical Requirements
-
-- Built with **Next.js**
-- Deployed to **Vercel** (share the live link)
-- Use clean, semantic, SEO-friendly HTML
-- Fully **responsive** design
-- Component-based code structure
-- Use **Git** for version control (GitHub repo must be public)
+- Drain Cleaning  
+- Water Heater Repair & Installation  
+- Leak Detection  
+- Emergency Plumbing
 
 ---
 
-## 🔍 SEO Requirements
+## ✅ What We’re Looking For
 
-- Unique, keyword-optimized `<title>` and `<meta description>` for every page
-- Include **Open Graph (og:) tags** and **Twitter card tags**
-- Add **JSON-LD schema markup** for a LocalBusiness
-- Use appropriate heading structure (one `<h1>` per page)
-- Include **alt text** for all images
-- Add an **XML sitemap** and **robots.txt**
-- Internal linking between service pages
-- Add local SEO details: NAP (Name, Address, Phone), city name in meta/title tags
+We want to see how you **think, structure, and execute** independently. This is not a step-by-step tutorial — treat it like a real-world project. Your deliverable should demonstrate:
+
+- Clean, responsive design (**mobile-first**)  
+- Solid **on-page SEO** implementation  
+- Clear **page structure and content hierarchy**  
+- **Fast performance** and optimized assets  
+- Clean, organized, and readable **codebase**  
+- **Reusable components** (if applicable)  
+- Basic **internal linking** and navigation  
 
 ---
 
-## 📄 Pages to Include
+## 📄 Required Pages
+
+Please include the following pages in your project:
 
 - `Home`  
+- At least **2 individual service pages**  
 - `About`  
-- `Contact` (with form + business location)  
-- `Services` (overview page)  
-- Individual service pages:
-  - Drain Cleaning  
-  - Water Heater Installation  
-  - Emergency Plumbing Repairs
-
-> Content can be AI-generated, but must be **realistic and SEO-structured**.
+- `Contact` (form can be a placeholder)  
+- Custom `404` page  
 
 ---
 
-## 📦 Submission Instructions
+## 🧠 Key Considerations
 
-1. Push your completed project to a **public GitHub repository**
-2. Deploy the site using **Vercel**
-3. Submit:
-   - Link to your GitHub repo
-   - Link to the live site
-   - (Optional) A short note on tools or decisions you made during development
-
----
-
-## ⏳ Time Limit
-
-You’ll have **24 hours** to complete this assignment once it's sent to you.
+- Treat this like a **real-world client deliverable**  
+- Follow **SEO best practices**:
+  - Unique and relevant `<title>` and `<meta description>` per page  
+  - Proper **semantic HTML**  
+  - Clear heading structure (H1, H2, etc.)  
+  - Structured content and **internal links**  
+- Placeholder content is fine — just keep it **realistic and relevant**  
+- Make your own decisions on structure, styling, and content strategy  
 
 ---
 
-## 🚀 Final Notes
+## 📦 Deliverables
 
-This is your chance to show us your strengths in **modern web development**, **on-page SEO**, and **attention to detail**. We care about clean code, structured thinking, and real-world SEO understanding.
+Please submit the following:
 
-We’re excited to see what you build — good luck!
+- A **GitHub repository** with your full code  
+- A `README.md` file that includes:
+  - A short description of your approach  
+  - Any assumptions, notes, or limitations  
+  - (Optional) A **live deployment** link (e.g. Vercel, Netlify)  
+
+---
+
+## ⏱ Deadline
+
+You have **24 hours** from the time we confirm the start.  
+Good luck — we’re excited to see your work!
