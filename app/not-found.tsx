@@ -5,7 +5,7 @@ import { Home, ArrowLeft, Wrench } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Page Not Found - ABC Plumber Austin, TX",
-  description: "The page you're looking for doesn't exist. Return to ABC Plumber's homepage for professional plumbing services in Austin, TX.",
+  description: "The page you&apos;re looking for doesn't exist. Return to ABC Plumber's homepage for professional plumbing services in Austin, TX.",
   robots: {
     index: false,
     follow: true,
@@ -42,8 +42,8 @@ export default function NotFound() {
               Page Not Found
             </h2>
             <p className="text-lg text-gray-600 mb-6">
-              Sorry, the page you're looking for doesn't exist or has been moved. 
-              Don't worry though - our plumbing services are still available!
+              Sorry, the page you&apos;re looking for doesn&apos;t exist or has been moved. 
+              Don&apos;t worry though - our plumbing services are still available!
             </p>
           </div>
 

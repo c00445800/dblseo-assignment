@@ -4,12 +4,12 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Shield, Clock, Phone, Users, Award } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "About ABC Plumber - Austin's Trusted Plumbing Company",
-  description: "Learn about ABC Plumber, Austin's trusted plumbing company since 2010. Professional, licensed, and insured plumbing services in Austin, TX.",
+  title: "About ABC Plumber - Austin&apos;s Trusted Plumbing Company",
+  description: "Learn about ABC Plumber, Austin&apos;s trusted plumbing company since 2010. Professional, licensed, and insured plumbing services in Austin, TX.",
   keywords: "about ABC Plumber Austin, plumbing company Austin, licensed plumber Austin, trusted plumber Austin",
   openGraph: {
-    title: "About ABC Plumber - Austin's Trusted Plumbing Company",
-    description: "Learn about ABC Plumber, Austin's trusted plumbing company since 2010. Professional, licensed, and insured plumbing services in Austin, TX.",
+    title: "About ABC Plumber - Austin&apos;s Trusted Plumbing Company",
+    description: "Learn about ABC Plumber, Austin&apos;s trusted plumbing company since 2010. Professional, licensed, and insured plumbing services in Austin, TX.",
     url: "https://www.abcplumbingservices.com/about",
   },
   alternates: {
@@ -28,12 +28,12 @@ export default function AboutPage() {
             About Us
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-            Austin's Trusted
+            Austin&apos;s Trusted
             <span className="block text-blue-600">Plumbing Experts</span>
           </h1>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Since 2010, ABC Plumber has been serving Austin and surrounding areas with professional, 
-            reliable plumbing services. We're your local experts for all your residential plumbing needs.
+            reliable plumbing services. &apos; your local experts for all your residential plumbing needs.
           </p>
         </section>
 
@@ -48,15 +48,15 @@ export default function AboutPage() {
                 <p>
                   Founded in 2010, ABC Plumber began as a small family-owned business with a simple mission: 
                   to provide honest, reliable plumbing services to the Austin community. What started as a 
-                  two-person operation has grown into one of Austin's most trusted plumbing companies.
+                  two-person operation has grown into one of Austin&apos;s most trusted plumbing companies.
                 </p>
                 <p>
-                  Over the past 14+ years, we've served thousands of satisfied customers throughout Austin 
+                  Over the past 14+ years, we&apos;ve served thousands of satisfied customers throughout Austin 
                   and the surrounding areas. Our commitment to quality workmanship, honest pricing, and 
                   exceptional customer service has remained unchanged since day one.
                 </p>
                 <p>
-                  Today, we're proud to be Austin's go-to plumbing experts, offering comprehensive 
+                  Today, &apos; proud to be Austin&apos;s go-to plumbing experts, offering comprehensive 
                   residential plumbing services with the same dedication and integrity that built our reputation.
                 </p>
               </div>
@@ -96,7 +96,7 @@ export default function AboutPage() {
               </div>
               <h3 className="text-xl font-bold text-white mb-4">Integrity</h3>
               <p className="text-gray-300">
-                We believe in honest pricing, transparent communication, and doing what's right for our customers. 
+                We believe in honest pricing, transparent communication, and doing what&apos;s right for our customers. 
                 No hidden fees, no surprises - just honest, reliable service.
               </p>
             </div>
@@ -122,8 +122,8 @@ export default function AboutPage() {
               </div>
               <h3 className="text-xl font-bold text-white mb-4">Community</h3>
               <p className="text-gray-300">
-                As a local Austin business, we're committed to serving our community. We treat every customer 
-                like a neighbor and every job like it's our own home.
+                As a local Austin business, &apos; committed to serving our community. We treat every customer 
+                like a neighbor and every job like it&apos;s our own home.
               </p>
             </div>
           </div>
@@ -195,7 +195,7 @@ export default function AboutPage() {
               <Phone className="w-6 h-6 text-white" />
             </div>
             <h3 className="text-2xl md:text-3xl font-bold mb-4">
-              Ready to Work with Austin's Trusted Plumbers?
+              Ready to Work with Austin&apos;s Trusted Plumbers?
             </h3>
             <p className="text-lg mb-6 text-gray-300">
               Experience the difference that 14+ years of expertise makes. Contact us today for reliable, professional plumbing services.

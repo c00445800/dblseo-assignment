@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Shield, Clock, Phone } from "lucide-react";
+import { ArrowRight, Shield, Phone } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Plumbing Services - ABC Plumber Austin, TX",
@@ -159,7 +159,7 @@ export default function ServicesPage() {
               <h3 className="text-xl font-bold text-white mb-4">Emergency Plumbing</h3>
               <p className="text-gray-300 mb-6 leading-relaxed">
                 24/7 emergency plumbing services for urgent repairs and installations. 
-                We're always ready when you need us most.
+                &apos; always ready when you need us most.
               </p>
               <ul className="space-y-2 mb-6 text-sm text-gray-300">
                 <li className="flex items-center">
@@ -198,7 +198,7 @@ export default function ServicesPage() {
               Need Professional Plumbing Help?
             </h3>
             <p className="text-lg mb-6 text-gray-300">
-              Don't wait for small problems to become big emergencies. Contact us today for reliable, professional plumbing services.
+              Don&apos;t wait for small problems to become big emergencies. Contact us today for reliable, professional plumbing services.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" asChild className="bg-gradient-to-r from-blue-600 to-blue-700 text-white hover:from-blue-500 hover:to-blue-600 font-bold shadow-lg">

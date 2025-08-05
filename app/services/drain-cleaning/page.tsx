@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Shield, Clock, Phone, CheckCircle } from "lucide-react";
+import { ArrowRight, Shield,  Phone, CheckCircle } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Drain Cleaning Services - ABC Plumber Austin, TX",
@@ -58,7 +58,7 @@ export default function DrainCleaningPage() {
                 <p>
                   Using advanced techniques like hydro jetting and video inspection, we ensure your drains 
                   are thoroughly cleaned and functioning properly, preventing future clogs and maintaining 
-                  your plumbing system's health.
+                  your plumbing system&apos;s health.
                 </p>
               </div>
             </div>
@@ -190,7 +190,7 @@ export default function DrainCleaningPage() {
               Need Professional Drain Cleaning?
             </h3>
             <p className="text-lg mb-6 text-gray-300">
-              Don't let clogged drains disrupt your daily routine. Contact us today for fast, reliable drain cleaning services.
+              Don&apos;t let clogged drains disrupt your daily routine. Contact us today for fast, reliable drain cleaning services.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" asChild className="bg-gradient-to-r from-blue-600 to-blue-700 text-white hover:from-blue-500 hover:to-blue-600 font-bold shadow-lg">

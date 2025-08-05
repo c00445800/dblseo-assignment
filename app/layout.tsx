@@ -16,21 +16,21 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.abcplumbingservices.com'),
-  title: "ABC Plumber - Austin's Trusted Residential Plumbing Services",
+  title: "ABC Plumber - Austin&apos;s Trusted Residential Plumbing Services",
   description: "Professional residential plumbing services in Austin, TX. Drain cleaning, leak detection, water heater repair, and emergency plumbing. 24/7 service available.",
   keywords: ["plumbing services Austin TX", "drain cleaning Austin", "leak detection Austin", "water heater repair Austin", "emergency plumbing Austin", "residential plumber Austin"],
   icons: {
     icon: "/favicon.ico",
   },
   openGraph: {
-    title: "ABC Plumber - Austin's Trusted Residential Plumbing Services",
+    title: "ABC Plumber - Austin&apos;s Trusted Residential Plumbing Services",
     description: "Professional residential plumbing services in Austin, TX. Drain cleaning, leak detection, water heater repair, and emergency plumbing. 24/7 service available.",
     images: [
       {
         url: "/assets/abc_plumbing.webp",
         width: 1200,
         height: 630,
-        alt: "ABC Plumber - Austin's Trusted Plumbing Services",
+        alt: "ABC Plumber - Austin&apos;s Trusted Plumbing Services",
       },
     ],
     url: "https://www.abcplumbingservices.com",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "ABC Plumber - Austin's Trusted Residential Plumbing Services",
+    title: "ABC Plumber - Austin&apos;s Trusted Residential Plumbing Services",
     description: "Professional residential plumbing services in Austin, TX. Drain cleaning, leak detection, water heater repair, and emergency plumbing.",
   },
   robots: {

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Shield, Clock, Phone, CheckCircle } from "lucide-react";
+import { ArrowRight, Shield, Phone, CheckCircle } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Leak Detection Services - ABC Plumber Austin, TX",
@@ -32,7 +32,7 @@ export default function LeakDetectionPage() {
             <span className="block text-blue-600">Detection Services</span>
           </h1>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Suspect a water leak but can't find it? Our advanced leak detection technology can locate 
+            Suspect a water leak but can&apos;t find it? Our advanced leak detection technology can locate 
             hidden leaks without causing damage to your property in Austin.
           </p>
         </section>
@@ -250,7 +250,7 @@ export default function LeakDetectionPage() {
               Suspect a Water Leak?
             </h3>
             <p className="text-lg mb-6 text-gray-300">
-              Don't wait for water damage to become severe. Contact us today for professional leak detection services.
+              Don &apos;t wait for water damage to become severe. Contact us today for professional leak detection services.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" asChild className="bg-gradient-to-r from-blue-600 to-blue-700 text-white hover:from-blue-500 hover:to-blue-600 font-bold shadow-lg">

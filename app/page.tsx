@@ -5,11 +5,11 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Phone, Clock, Shield } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "ABC Plumber - Austin's Trusted Residential Plumbing Services",
+  title: "ABC Plumber - Austin&apos;s Trusted Residential Plumbing Services",
   description: "Professional residential plumbing services in Austin, TX. Drain cleaning, leak detection, water heater repair, and emergency plumbing. 24/7 service available.",
   keywords: "plumbing services Austin TX, drain cleaning Austin, leak detection Austin, water heater repair Austin, emergency plumbing Austin",
   openGraph: {
-    title: "ABC Plumber - Austin's Trusted Residential Plumbing Services",
+    title: "ABC Plumber - Austin&apos;s Trusted Residential Plumbing Services",
     description: "Professional residential plumbing services in Austin, TX. Drain cleaning, leak detection, water heater repair, and emergency plumbing.",
     url: "https://www.abcplumbingservices.com",
     siteName: "ABC Plumber",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "ABC Plumber - Austin's Trusted Residential Plumbing Services",
+    title: "ABC Plumber - Austin&apos;s Trusted Residential Plumbing Services",
     description: "Professional residential plumbing services in Austin, TX. Drain cleaning, leak detection, water heater repair, and emergency plumbing.",
   },
   alternates: {
@@ -72,14 +72,14 @@ export default function Home() {
 
               {/* Main Heading */}
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-                Austin's Trusted
+                Austin&apos;s Trusted
                 <span className="block text-blue-400">Plumbing Experts</span>
               </h1>
 
               {/* Subtitle */}
               <p className="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl mx-auto leading-relaxed">
                 Professional residential plumbing services in Austin, TX. From drain cleaning to emergency repairs, 
-                we're your reliable local plumbers with over 14 years of experience.
+                &apos; your reliable local plumbers with over 14 years of experience.
               </p>
 
               {/* CTA Buttons */}
@@ -405,7 +405,7 @@ export default function Home() {
                 </div>
                 <h3 className="text-xl font-bold text-white mb-4">Emergency Plumbing</h3>
                 <p className="text-gray-300 mb-6 leading-relaxed">
-                  24/7 emergency plumbing services for urgent repairs and installations. We're always ready when you need us most.
+                  24/7 emergency plumbing services for urgent repairs and installations. &apos; always ready when you need us most.
                 </p>
                 <ul className="space-y-2 mb-6 text-sm text-gray-300">
                   <li className="flex items-center">
@@ -458,7 +458,7 @@ export default function Home() {
                 Why Choose ABC Plumber?
               </h2>
               <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-                We're not just plumbers - we're your trusted partners in maintaining your home's plumbing system
+                &apos; not just plumbers - &apos; your trusted partners in maintaining your home&apos;s plumbing system
               </p>
             </div>
             
@@ -471,7 +471,7 @@ export default function Home() {
                 </div>
                 <h3 className="text-xl font-bold text-white mb-4">Licensed & Insured</h3>
                 <p className="text-gray-300 mb-6 leading-relaxed">
-                  All our plumbers are licensed, bonded, and insured for your protection. We carry comprehensive liability insurance and workers' compensation coverage.
+                  All our plumbers are licensed, bonded, and insured for your protection. We carry comprehensive liability insurance and worker&apos;s compensation coverage.
                 </p>
                 <ul className="space-y-2 text-sm text-gray-300">
                   <li className="flex items-center">
@@ -497,7 +497,7 @@ export default function Home() {
                 </div>
                 <h3 className="text-xl font-bold text-white mb-4">24/7 Emergency Service</h3>
                 <p className="text-gray-300 mb-6 leading-relaxed">
-                  Plumbing emergencies don't wait for business hours. We're available around the clock for emergency plumbing issues and urgent repairs.
+                  Plumbing emergencies Don&apos;t wait for business hours. &apos; available around the clock for emergency plumbing issues and urgent repairs.
                 </p>
                 <ul className="space-y-2 text-sm text-gray-300">
                   <li className="flex items-center">
@@ -700,7 +700,7 @@ export default function Home() {
                     </Link>
                   </h3>
                   <p className="text-gray-300 mb-4 leading-relaxed">
-                    When plumbing emergencies strike, knowing what to do can prevent further damage. Here's your essential emergency checklist.
+                    When plumbing emergencies strike, knowing what to do can prevent further damage. Here&apos;s your essential emergency checklist.
                   </p>
                   <Link
                     href="/blog/emergency-plumbing-checklist"
@@ -726,7 +726,7 @@ export default function Home() {
                   Need Professional Plumbing Help?
                 </h3>
                 <p className="text-lg mb-6 text-gray-300">
-                  Don't wait for small problems to become big emergencies. Contact us today for reliable, professional plumbing services.
+                  Don&apos;t wait for small problems to become big emergencies. Contact us today for reliable, professional plumbing services.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button size="lg" asChild className="bg-gradient-to-r from-blue-600 to-blue-700 text-white hover:from-blue-500 hover:to-blue-600 font-bold shadow-lg">
