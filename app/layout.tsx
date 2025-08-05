@@ -76,6 +76,89 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        {/* Schema.org structured data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "PlumbingService",
+              "name": "ABC Plumber",
+              "description": "Professional residential plumbing services in Austin, TX. Drain cleaning, leak detection, water heater repair, and emergency plumbing.",
+              "url": "https://www.abcplumbingservices.com",
+              "logo": "https://www.abcplumbingservices.com/assets/abc_plumbing.webp",
+              "image": "https://www.abcplumbingservices.com/assets/abc_plumbing.webp",
+              "telephone": "+1-512-555-0123",
+              "email": "info@abcplumbingservices.com",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Austin",
+                "addressRegion": "TX",
+                "addressCountry": "US"
+              },
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": "30.2672",
+                "longitude": "-97.7431"
+              },
+              "areaServed": {
+                "@type": "City",
+                "name": "Austin"
+              },
+              "serviceArea": {
+                "@type": "GeoCircle",
+                "geoMidpoint": {
+                  "@type": "GeoCoordinates",
+                  "latitude": "30.2672",
+                  "longitude": "-97.7431"
+                },
+                "geoRadius": "50000"
+              },
+              "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "Plumbing Services",
+                "itemListElement": [
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "Drain Cleaning",
+                      "description": "Professional drain cleaning services for clogged drains and sewer lines"
+                    }
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "Leak Detection",
+                      "description": "Advanced leak detection technology to find and repair hidden water leaks"
+                    }
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "Emergency Plumbing",
+                      "description": "24/7 emergency plumbing services for urgent repairs"
+                    }
+                  }
+                ]
+              },
+              "openingHours": "Mo-Su 00:00-23:59",
+              "priceRange": "$$",
+              "paymentAccepted": ["Cash", "Credit Card", "Check"],
+              "currenciesAccepted": "USD",
+              "foundingDate": "2010",
+              "sameAs": [
+                "https://www.facebook.com/abcplumber",
+                "https://www.instagram.com/abcplumber",
+                "https://twitter.com/abcplumber"
+              ]
+            })
+          }}
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
