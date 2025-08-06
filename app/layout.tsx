@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.abcplumbingservices.com'),
-  title: "ABC Plumber - Austin&apos;s Trusted Residential Plumbing Services",
+  title: "ABC Plumber - Austin's Trusted Residential Plumbing Services",
   description: "Professional residential plumbing services in Austin, TX. Drain cleaning, leak detection, water heater repair, and emergency plumbing. 24/7 service available.",
   keywords: ["plumbing services Austin TX", "drain cleaning Austin", "leak detection Austin", "water heater repair Austin", "emergency plumbing Austin", "residential plumber Austin"],
   icons: {
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     canonical: "https://www.abcplumbingservices.com",
   },
   authors: [{ name: "ABC Plumber", url: "https://www.abcplumbingservices.com" }],
-  creator: "ABC Plumber",
+  creator: "Sebastian Ramirez",
   publisher: "ABC Plumber",
   other: {
     "theme-color": "#1f2937",

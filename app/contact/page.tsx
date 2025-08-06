@@ -1,23 +1,58 @@
-import type { Metadata } from "next";
+'use client';
+import { useState } from "react";  
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Clock, Phone, Mail, MapPin } from "lucide-react";
 
-export const metadata: Metadata = {
-  title: "Contact ABC Plumber - Austin Plumbing Services",
-  description: "Contact ABC Plumber for professional plumbing services in Austin, TX. Call (512) 555-0123 for 24/7 emergency plumbing services.",
-  keywords: "contact ABC Plumber Austin, plumbing services Austin, emergency plumber Austin, plumber phone number Austin",
-  openGraph: {
-    title: "Contact ABC Plumber - Austin Plumbing Services",
-    description: "Contact ABC Plumber for professional plumbing services in Austin, TX. Call (512) 555-0123 for 24/7 emergency plumbing services.",
-    url: "https://www.abcplumbingservices.com/contact",
-  },
-  alternates: {
-    canonical: "https://www.abcplumbingservices.com/contact",
-  },
-};
-
 export default function ContactPage() {
+  const [status, setStatus] = useState('');
+
+  const validateForm = (formData: { firstName: string; lastName: string; email: string; phone: string; service?: string; message: string; }) => {
+
+    if (!formData.firstName || !formData.lastName || !formData.email || !formData.phone || !formData.message) {
+      return 'All required fields must be filled.';
+    }
+    
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      return 'Please enter a valid email address.';
+    }
+
+    const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
+    if (!phoneRegex.test(formData.phone)) {
+      return 'Please enter a valid phone number.';
+    }
+
+
+    return null; 
+  };
+
+  
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault(); 
+    setStatus('Sent'); 
+    const form = event.currentTarget;
+
+    
+    const formData = {
+      firstName: (form.elements.namedItem('firstName') as HTMLInputElement).value,
+      lastName: (form.elements.namedItem('lastName') as HTMLInputElement).value,
+      email: (form.elements.namedItem('email') as HTMLInputElement).value,
+      phone: (form.elements.namedItem('phone') as HTMLInputElement).value,
+      service: (form.elements.namedItem('service') as HTMLSelectElement).value, 
+      message: (form.elements.namedItem('message') as HTMLTextAreaElement).value, 
+    };
+
+
+    const validationError = validateForm(formData);
+    if (validationError) {
+      setStatus(validationError); 
+      return;
+    }
+
+    // Here the logic for the contact submision would be placed
+  };
+
   return (
     <div className="px-4 min-h-screen bg-gradient-to-br from-gray-50 via-gray-100 to-gray-50">
       <main className="container mx-auto px-4 py-20">
@@ -33,7 +68,7 @@ export default function ContactPage() {
           </h1>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Ready to solve your plumbing problems? Contact us for professional, reliable plumbing services 
-            in Austin and surrounding areas. &apos; here to help 24/7.
+            in Austin and surrounding areas. We&apos;re here to help 24/7.
           </p>
         </section>
 
@@ -46,7 +81,7 @@ export default function ContactPage() {
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-400 via-blue-500 to-blue-400"></div>
               <h2 className="text-2xl font-bold text-white mb-6">Send Us a Message</h2>
               
-              <form className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
                     <label htmlFor="firstName" className="block text-sm font-medium text-gray-300 mb-2">
@@ -55,7 +90,7 @@ export default function ContactPage() {
                     <input
                       type="text"
                       id="firstName"
-                      name="firstName"
+                      name="firstName" // Ensure 'name' attribute matches for form.elements.namedItem
                       required
                       className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       placeholder="Your first name"
@@ -68,7 +103,7 @@ export default function ContactPage() {
                     <input
                       type="text"
                       id="lastName"
-                      name="lastName"
+                      name="lastName" // Ensure 'name' attribute matches
                       required
                       className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       placeholder="Your last name"
@@ -83,7 +118,7 @@ export default function ContactPage() {
                   <input
                     type="email"
                     id="email"
-                    name="email"
+                    name="email" // Ensure 'name' attribute matches
                     required
                     className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="your.email@example.com"
@@ -97,7 +132,7 @@ export default function ContactPage() {
                   <input
                     type="tel"
                     id="phone"
-                    name="phone"
+                    name="phone" // Ensure 'name' attribute matches
                     required
                     className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="(512) 555-0123"
@@ -110,7 +145,7 @@ export default function ContactPage() {
                   </label>
                   <select
                     id="service"
-                    name="service"
+                    name="service" // Ensure 'name' attribute matches
                     className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   >
                     <option value="">Select a service</option>
@@ -128,7 +163,7 @@ export default function ContactPage() {
                   </label>
                   <textarea
                     id="message"
-                    name="message"
+                    name="message" // Ensure 'name' attribute matches
                     rows={4}
                     required
                     className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -139,9 +174,16 @@ export default function ContactPage() {
                 <Button 
                   type="submit" 
                   className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 text-white font-bold shadow-lg"
+                  disabled={status === 'Sending...'} // Disable button while sending
                 >
-                  Send Message
+                  {status === 'Sending...' ? 'Sending...' : 'Send Message'}
                 </Button>
+                
+                {status && (
+                  <p className={`mt-4 text-center ${status.includes('Error') ? 'text-red-400' : 'text-green-400'}`}>
+                    {status}
+                  </p>
+                )}
               </form>
             </div>
             
@@ -275,4 +317,4 @@ export default function ContactPage() {
       </main>
     </div>
   );
-} 
+}
