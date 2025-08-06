@@ -34,7 +34,7 @@ export default function AboutPage() {
             <span className="block text-blue-600">Plumbing Experts</span>
           </h1>
           <p className="text-lg text-gray-600 max-w-3xl lg:max-w-none mx-auto">
-            Since 2010, ABC Plumber has been serving Austin and surrounding areas with professional, reliable plumbing services. We're your local experts for all your residential plumbing needs.
+            Since 2010, ABC Plumber has been serving Austin and surrounding areas with professional, reliable plumbing services. We`&apos;`re your local experts for all your residential plumbing needs.
           </p>
         </div>
         
@@ -55,7 +55,7 @@ export default function AboutPage() {
           />
         </div>
       </section>
-      
+
         {/* Story Section */}
         <section className="mb-20">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
