@@ -5,7 +5,7 @@ import { Home, ArrowLeft, Wrench } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Page Not Found - ABC Plumber Austin, TX",
-  description: "The page you&apos;re looking for doesn't exist. Return to ABC Plumber's homepage for professional plumbing services in Austin, TX.",
+  description: "The page you're looking for doesn't exist. Return to ABC Plumber's homepage for professional plumbing services in Austin, TX.",
   robots: {
     index: false,
     follow: true,
@@ -50,15 +50,19 @@ export default function NotFound() {
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
             <Button size="lg" asChild className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 text-white px-8 py-3 text-lg shadow-lg border border-blue-400/30">
-              <Link href="/" className="flex items-center">
+              <Link href="/" className="flex items-center" aria-description="Home page for ABC Plumbering">
                 <Home className="mr-2 w-5 h-5" />
                 Go Home
+                <span className="sr-only">Redirect to Home</span>
+
               </Link>
             </Button>
             <Button size="lg" variant="outline" asChild className="border-blue-400 text-blue-400 hover:bg-blue-600 hover:text-white px-8 py-3 text-lg">
               <Link href="/services" className="flex items-center">
                 <ArrowLeft className="mr-2 w-5 h-5" />
                 Our Services
+                <span className="sr-only">Redirect to Services Section</span>
+
               </Link>
             </Button>
           </div>
@@ -72,20 +76,26 @@ export default function NotFound() {
               <Link 
                 href="/services/drain-cleaning" 
                 className="block p-3 bg-gray-700/50 rounded-lg text-gray-300 hover:text-blue-400 hover:bg-blue-600/20 transition-colors"
+                
               >
                 Drain Cleaning
+                <span className="sr-only">Redirect to Drain Cleaning</span>
               </Link>
               <Link 
                 href="/services/leak-detection" 
                 className="block p-3 bg-gray-700/50 rounded-lg text-gray-300 hover:text-blue-400 hover:bg-blue-600/20 transition-colors"
               >
                 Leak Detection
+                <span className="sr-only">Redirect to Leak Detection</span>
+
               </Link>
               <Link 
                 href="/contact" 
                 className="block p-3 bg-gray-700/50 rounded-lg text-gray-300 hover:text-blue-400 hover:bg-blue-600/20 transition-colors"
               >
                 Contact Us
+                <span className="sr-only">Redirect to Contact Sectuion</span>
+
               </Link>
             </div>
           </div>

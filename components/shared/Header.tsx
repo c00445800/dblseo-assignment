@@ -4,12 +4,37 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuList, NavigationMenuTrigger } from "@/components/ui/navigation-menu";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu";
+import {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetTrigger,
+  SheetTitle, // <--- Import SheetTitle
+} from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
+
+  const isLinkActive = (href: string) => {
+    if (href === "/") {
+      return pathname === "/";
+    }
+    return pathname.startsWith(href);
+  };
+
+  const baseLinkClass = "text-white hover:text-blue-400 transition-colors px-3 py-2 rounded-md text-sm font-medium";
+  const activeLinkClass = "text-blue-400 bg-blue-600/20";
+  const baseSheetLinkClass = "text-lg font-medium text-white hover:text-blue-400 transition-colors py-2 px-3 rounded-md";
 
   const closeMenu = () => {
     setIsMenuOpen(false);
@@ -19,31 +44,31 @@ export default function Header() {
     <header className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 shadow-2xl sticky top-0 z-50 border-b border-gray-600" role="banner">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
-          <Link href="/" className="flex items-center space-x-2" onClick={closeMenu}>
+          <Link href="/" className="flex items-center h-full space-x-2" onClick={closeMenu}>
             <Image
               src="/assets/abc_plumbing.webp"
               alt="ABC Plumber Logo"
-              width={120}
-              height={40}
-              className="h-8 md:h-10 w-auto"
+              width={200}
+              height={200}
+              className="h-full md:h-15 w-auto"
               priority
             />
-            <span className="text-xl md:text-2xl font-bold text-blue-400 hidden sm:block">
-              ABC Plumber
-            </span>
           </Link>
 
-          {/* Desktop Navigation */}
           <NavigationMenu className="hidden md:flex">
             <NavigationMenuList>
               <NavigationMenuItem>
-                <Link href="/" className="text-white hover:text-blue-400 transition-colors px-3 py-2 rounded-md text-sm font-medium">
+                <Link href="/" className={`${baseLinkClass} ${isLinkActive("/") ? activeLinkClass : ""}`}>
                   Home
                 </Link>
               </NavigationMenuItem>
               
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="text-white hover:text-blue-400 transition-colors">
+                <NavigationMenuTrigger 
+                  className={`bg-transparent text-white transition-colors ${
+                    isLinkActive("/services") ? activeLinkClass : ""
+                  }`}
+                >
                   Services
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
@@ -69,13 +94,13 @@ export default function Header() {
               </NavigationMenuItem>
               
               <NavigationMenuItem>
-                <Link href="/about" className="text-white hover:text-blue-400 transition-colors px-3 py-2 rounded-md text-sm font-medium">
+                <Link href="/about" className={`${baseLinkClass} ${isLinkActive("/about") ? activeLinkClass : ""}`}>
                   About
                 </Link>
               </NavigationMenuItem>
               
               <NavigationMenuItem>
-                <Link href="/contact" className="text-white hover:text-blue-400 transition-colors px-3 py-2 rounded-md text-sm font-medium">
+                <Link href="/contact" className={`${baseLinkClass} ${isLinkActive("/contact") ? activeLinkClass : ""}`}>
                   Contact
                 </Link>
               </NavigationMenuItem>
@@ -99,58 +124,77 @@ export default function Header() {
                 <span className="sr-only">Toggle menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-[300px] sm:w-[400px] bg-gradient-to-br from-gray-900 to-gray-800 border-l border-gray-600">
+            <SheetContent side="right" className="w-[300px] sm:w-[400px] bg-gradient-to-br from-gray-900 to-gray-800 border-l px-4 border-gray-600">
+              <SheetTitle className="sr-only">Main Navigation</SheetTitle>
+              
               <div className="flex flex-col space-y-4 mt-8">
-                <Link 
-                  href="/" 
-                  className="text-lg font-medium text-white hover:text-blue-400 transition-colors"
-                  onClick={closeMenu}
-                >
-                  Home
-                </Link>
+                <SheetClose asChild>
+                  <Link 
+                    href="/" 
+                    className={`${baseSheetLinkClass} ${isLinkActive("/") ? activeLinkClass : ""}`}
+                  >
+                    Home
+                  </Link>
+                </SheetClose>
                 
                 <div className="space-y-2">
-                  <h3 className="text-lg font-medium text-white">Services</h3>
+                  <h3 
+                    className={`${baseSheetLinkClass} ${
+                      isLinkActive("/services") ? activeLinkClass : ""
+                    }`}
+                  >
+                    Services
+                  </h3>
                   <div className="pl-4 space-y-2">
-                    <Link 
-                      href="/services/drain-cleaning" 
-                      className="block text-gray-300 hover:text-blue-400 transition-colors"
-                      onClick={closeMenu}
-                    >
-                      Drain Cleaning
-                    </Link>
-                    <Link 
-                      href="/services/leak-detection" 
-                      className="block text-gray-300 hover:text-blue-400 transition-colors"
-                      onClick={closeMenu}
-                    >
-                      Leak Detection
-                    </Link>
+                    <SheetClose asChild>
+                      <Link 
+                        href="/services/drain-cleaning" 
+                        className={`block text-gray-300 hover:text-blue-400 transition-colors py-1 px-3 rounded-md ${
+                          isLinkActive("/services/drain-cleaning") ? "text-blue-400" : ""
+                        }`}
+                      >
+                        Drain Cleaning
+                      </Link>
+                    </SheetClose>
+                    <SheetClose asChild>
+                      <Link 
+                        href="/services/leak-detection" 
+                        className={`block text-gray-300 hover:text-blue-400 transition-colors py-1 px-3 rounded-md ${
+                          isLinkActive("/services/leak-detection") ? "text-blue-400" : ""
+                        }`}
+                      >
+                        Leak Detection
+                      </Link>
+                    </SheetClose>
                   </div>
                 </div>
                 
-                <Link 
-                  href="/about" 
-                  className="text-lg font-medium text-white hover:text-blue-400 transition-colors"
-                  onClick={closeMenu}
-                >
-                  About
-                </Link>
+                <SheetClose asChild>
+                  <Link 
+                    href="/about" 
+                    className={`${baseSheetLinkClass} ${isLinkActive("/about") ? activeLinkClass : ""}`}
+                  >
+                    About
+                  </Link>
+                </SheetClose>
                 
-                <Link 
-                  href="/contact" 
-                  className="text-lg font-medium text-white hover:text-blue-400 transition-colors"
-                  onClick={closeMenu}
-                >
-                  Contact
-                </Link>
+                <SheetClose asChild>
+                  <Link 
+                    href="/contact" 
+                    className={`${baseSheetLinkClass} ${isLinkActive("/contact") ? activeLinkClass : ""}`}
+                  >
+                    Contact
+                  </Link>
+                </SheetClose>
                 
                 <div className="pt-4">
-                  <Button asChild className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 text-white shadow-lg">
-                    <Link href="/contact" onClick={closeMenu}>
-                      Contact Us
-                    </Link>
-                  </Button>
+                  <SheetClose asChild>
+                    <Button asChild className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 text-white shadow-lg">
+                      <Link href="/contact">
+                        Contact Us
+                      </Link>
+                    </Button>
+                  </SheetClose>
                 </div>
               </div>
             </SheetContent>
@@ -159,4 +203,4 @@ export default function Header() {
       </div>
     </header>
   );
-} 
+}

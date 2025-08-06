@@ -112,6 +112,24 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
+@media (min-width: 64rem) {
+  .container {
+      max-width: 100rem;
+  }
+}
+
+@media (min-width: 48rem) {
+  .container {
+      max-width: 100rem;
+  }
+}
+
+@media (min-width: 40rem) {
+  .container {
+      max-width: 100rem;
+  }
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;

@@ -97,46 +97,9 @@ export default function Home() {
                   </Link>
                 </Button>
               </div>
-
-              {/* Trust Indicators */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
-                <div className="flex items-center justify-center space-x-3 text-white">
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center shadow-lg">
-                    <Shield className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <div className="font-semibold">Licensed & Insured</div>
-                    <div className="text-sm text-gray-300">Full protection</div>
-                  </div>
-                </div>
-                <div className="flex items-center justify-center space-x-3 text-white">
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center shadow-lg">
-                    <Clock className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <div className="font-semibold">24/7 Emergency</div>
-                    <div className="text-sm text-gray-300">Always available</div>
-                  </div>
-                </div>
-                <div className="flex items-center justify-center space-x-3 text-white">
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center shadow-lg">
-                    <Phone className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <div className="font-semibold">Local Austin</div>
-                    <div className="text-sm text-gray-300">Same-day service</div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
 
-          {/* Scroll Indicator */}
-          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-            <div className="w-6 h-10 border-2 border-blue-400 rounded-full flex justify-center">
-              <div className="w-1 h-3 bg-blue-400 rounded-full mt-2 animate-pulse"></div>
-            </div>
-          </div>
         </section>
 
         {/* Overview Section */}
@@ -225,7 +188,7 @@ export default function Home() {
               </div>
               
               {/* Image Side */}
-              <div className="relative">
+              <div className="relative px-2">
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-gray-600">
                   <Image
                     src="/assets/plumber.webp"
@@ -241,7 +204,7 @@ export default function Home() {
                 </div>
                 
                 {/* Floating stats card */}
-                <div className="absolute -bottom-6 -left-6 bg-gradient-to-br from-gray-800 to-gray-700 rounded-xl shadow-2xl p-4 border border-gray-600">
+                <div className="px-2 absolute -bottom-6 -left-6 bg-gradient-to-br from-gray-800 to-gray-700 rounded-xl shadow-2xl p-4 border border-gray-600">
                   <div className="text-center">
                     <div className="text-2xl font-bold text-blue-400">14+</div>
                     <div className="text-sm text-gray-300">Years Experience</div>
@@ -249,7 +212,7 @@ export default function Home() {
                 </div>
                 
                 {/* Floating service card */}
-                <div className="absolute -top-6 -right-6 bg-gradient-to-br from-blue-400 to-blue-600 text-white rounded-xl shadow-2xl p-4 border border-blue-300/30">
+                <div className="px-2 absolute -top-6 -right-6 bg-gradient-to-br from-blue-400 to-blue-600 text-white rounded-xl shadow-2xl p-4 border border-blue-300/30">
                   <div className="text-center">
                     <div className="text-2xl font-bold">24/7</div>
                     <div className="text-sm opacity-90">Emergency Service</div>
@@ -289,7 +252,7 @@ export default function Home() {
               </p>
             </div>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
               <div className="bg-gradient-to-br from-gray-800 to-gray-700 p-8 rounded-2xl shadow-2xl hover:shadow-blue-500/20 transition-all duration-300 hover:-translate-y-1 border border-gray-600 relative overflow-hidden">
                 {/* Metallic pipe decoration */}
                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-400 via-blue-500 to-blue-400"></div>
@@ -322,6 +285,8 @@ export default function Home() {
                 >
                   Learn More 
                   <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  <span className="sr-only">Redirect to Drain Cleaning</span>
+
                 </Link>
               </div>
 
@@ -356,79 +321,13 @@ export default function Home() {
                   className="text-blue-400 hover:text-blue-300 font-semibold inline-flex items-center group"
                 >
                   Learn More 
+                  <span className="sr-only">Redirect to Leak Detection</span>
+
                   <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </div>
 
-              <div className="bg-gradient-to-br from-gray-800 to-gray-700 p-8 rounded-2xl shadow-2xl hover:shadow-blue-500/20 transition-all duration-300 hover:-translate-y-1 border border-gray-600 relative overflow-hidden">
-                {/* Metallic pipe decoration */}
-                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-400 via-blue-500 to-blue-400"></div>
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold text-white mb-4">Water Heater</h3>
-                <p className="text-gray-300 mb-6 leading-relaxed">
-                  Water heater repair, installation, and maintenance services. We work with all brands and types of water heaters.
-                </p>
-                <ul className="space-y-2 mb-6 text-sm text-gray-300">
-                  <li className="flex items-center">
-                    <div className="w-2 h-2 bg-blue-400 rounded-full mr-3 shadow-sm"></div>
-                    Tank & tankless heaters
-                  </li>
-                  <li className="flex items-center">
-                    <div className="w-2 h-2 bg-blue-400 rounded-full mr-3 shadow-sm"></div>
-                    Repair & replacement
-                  </li>
-                  <li className="flex items-center">
-                    <div className="w-2 h-2 bg-blue-400 rounded-full mr-3 shadow-sm"></div>
-                    Maintenance services
-                  </li>
-                </ul>
-                <Link
-                  href="/services/water-heater"
-                  className="text-blue-400 hover:text-blue-300 font-semibold inline-flex items-center group"
-                >
-                  Learn More 
-                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </Link>
-              </div>
-
-              <div className="bg-gradient-to-br from-gray-800 to-gray-700 p-8 rounded-2xl shadow-2xl hover:shadow-blue-500/20 transition-all duration-300 hover:-translate-y-1 border border-gray-600 relative overflow-hidden">
-                {/* Metallic pipe decoration */}
-                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-400 via-blue-500 to-blue-400"></div>
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold text-white mb-4">Emergency Plumbing</h3>
-                <p className="text-gray-300 mb-6 leading-relaxed">
-                  24/7 emergency plumbing services for urgent repairs and installations. &apos; always ready when you need us most.
-                </p>
-                <ul className="space-y-2 mb-6 text-sm text-gray-300">
-                  <li className="flex items-center">
-                    <div className="w-2 h-2 bg-blue-400 rounded-full mr-3 shadow-sm"></div>
-                    Burst pipe repairs
-                  </li>
-                  <li className="flex items-center">
-                    <div className="w-2 h-2 bg-blue-400 rounded-full mr-3 shadow-sm"></div>
-                    Overflowing fixtures
-                  </li>
-                  <li className="flex items-center">
-                    <div className="w-2 h-2 bg-blue-400 rounded-full mr-3 shadow-sm"></div>
-                    Gas line emergencies
-                  </li>
-                </ul>
-                <Link
-                  href="/services/emergency-plumbing"
-                  className="text-blue-400 hover:text-blue-300 font-semibold inline-flex items-center group"
-                >
-                  Learn More 
-                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </Link>
-              </div>
+              
             </div>
           </div>
         </section>
