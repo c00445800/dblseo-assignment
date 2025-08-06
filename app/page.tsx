@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Phone, Clock, Shield } from "lucide-react";
 
+
 export const metadata: Metadata = {
   title: "ABC Plumber - Austin&apos;s Trusted Residential Plumbing Services",
   description: "Professional residential plumbing services in Austin, TX. Drain cleaning, leak detection, water heater repair, and emergency plumbing. 24/7 service available.",
@@ -141,7 +142,7 @@ export default function Home() {
                       <Shield className="w-4 h-4 text-white" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-white">Licensed & Insured</h4>
+                      <h3 className="font-semibold text-white">Licensed & Insured</h3>
                       <p className="text-sm text-gray-300">Full protection for your peace of mind</p>
                     </div>
                   </div>
@@ -518,6 +519,8 @@ export default function Home() {
                   <h3 className="text-xl font-bold text-white mb-3">
                     <Link href="/blog/prevent-drain-clogs" className="hover:text-blue-400 transition-colors">
                       5 Ways to Prevent Drain Clogs This Winter
+                      <span className="sr-only">Redirect to blog link about clog prevention</span>
+
                     </Link>
                   </h3>
                   <p className="text-gray-300 mb-4 leading-relaxed">
@@ -529,6 +532,8 @@ export default function Home() {
                     aria-label="Read full article about preventing drain clogs"
                   >
                     Read More 
+                    <span className="sr-only">Redirect to blog about drain clogs</span>
+
                     <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </div>
@@ -557,6 +562,8 @@ export default function Home() {
                   <h3 className="text-xl font-bold text-white mb-3">
                     <Link href="/blog/water-heater-maintenance" className="hover:text-blue-400 transition-colors">
                       Water Heater Maintenance: A Complete Guide
+                      <span className="sr-only">Redirect to blog link about Heater maintenance</span>
+
                     </Link>
                   </h3>
                   <p className="text-gray-300 mb-4 leading-relaxed">
@@ -568,6 +575,8 @@ export default function Home() {
                     aria-label="Read full article about water heater maintenance"
                   >
                     Read More 
+                    <span className="sr-only">Redirect to blog link about water heater</span>
+
                     <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </div>
@@ -596,6 +605,7 @@ export default function Home() {
                   <h3 className="text-xl font-bold text-white mb-3">
                     <Link href="/blog/emergency-plumbing-checklist" className="hover:text-blue-400 transition-colors">
                       Emergency Plumbing: What to Do Before We Arrive
+                    <span className="sr-only">Redirect to blog link about emergency plumbing</span>
                     </Link>
                   </h3>
                   <p className="text-gray-300 mb-4 leading-relaxed">
@@ -607,6 +617,8 @@ export default function Home() {
                     aria-label="Read full article about emergency plumbing checklist"
                   >
                     Read More 
+                    <span className="sr-only">Redirect to blog link about emergency plumbing</span>
+
                     <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </div>

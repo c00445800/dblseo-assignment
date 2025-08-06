@@ -1,57 +1,28 @@
-'use client';
-import { useState } from "react";  
+// Removed 'use client' as this component no longer requires client-side JavaScript
+// for form handling, making it a Server Component for better performance and SEO.
+
 import Link from "next/link";
+import type { Metadata } from "next";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Clock, Phone, Mail, MapPin } from "lucide-react";
 
+export const metadata: Metadata = {
+  title: "Contact ABC Plumber - Austin Plumbing Services",
+  description: "Contact ABC Plumber for professional plumbing services in Austin, TX. Call (512) 555-0123 for 24/7 emergency plumbing services.",
+  keywords: "contact ABC Plumber Austin, plumbing services Austin, emergency plumber Austin, plumber phone number Austin",
+  openGraph: {
+    title: "Contact ABC Plumber - Austin Plumbing Services",
+    description: "Contact ABC Plumber for professional plumbing services in Austin, TX. Call (512) 555-0123 for 24/7 emergency plumbing services.",
+    url: "https://www.abcplumbingservices.com/contact",
+  },
+  alternates: {
+    canonical: "https://www.abcplumbingservices.com/contact",
+  },
+};
+
 export default function ContactPage() {
-  const [status, setStatus] = useState('');
-
-  const validateForm = (formData: { firstName: string; lastName: string; email: string; phone: string; service?: string; message: string; }) => {
-
-    if (!formData.firstName || !formData.lastName || !formData.email || !formData.phone || !formData.message) {
-      return 'All required fields must be filled.';
-    }
-    
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(formData.email)) {
-      return 'Please enter a valid email address.';
-    }
-
-    const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
-    if (!phoneRegex.test(formData.phone)) {
-      return 'Please enter a valid phone number.';
-    }
-
-
-    return null; 
-  };
-
-  
-  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault(); 
-    setStatus('Sent'); 
-    const form = event.currentTarget;
-
-    
-    const formData = {
-      firstName: (form.elements.namedItem('firstName') as HTMLInputElement).value,
-      lastName: (form.elements.namedItem('lastName') as HTMLInputElement).value,
-      email: (form.elements.namedItem('email') as HTMLInputElement).value,
-      phone: (form.elements.namedItem('phone') as HTMLInputElement).value,
-      service: (form.elements.namedItem('service') as HTMLSelectElement).value, 
-      message: (form.elements.namedItem('message') as HTMLTextAreaElement).value, 
-    };
-
-
-    const validationError = validateForm(formData);
-    if (validationError) {
-      setStatus(validationError); 
-      return;
-    }
-
-    // Here the logic for the contact submision would be placed
-  };
+  // Removed validateForm and handleSubmit functions.
+  // The form will now rely on native HTML5 validation and submission.
 
   return (
     <div className="px-4 min-h-screen bg-gradient-to-br from-gray-50 via-gray-100 to-gray-50">
@@ -81,7 +52,8 @@ export default function ContactPage() {
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-400 via-blue-500 to-blue-400"></div>
               <h2 className="text-2xl font-bold text-white mb-6">Send Us a Message</h2>
               
-              <form onSubmit={handleSubmit} className="space-y-6">
+              {/* Form now submits directly to the API route using native HTML behavior */}
+              <form action="/api/contact" method="POST" className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
                     <label htmlFor="firstName" className="block text-sm font-medium text-gray-300 mb-2">
@@ -90,8 +62,8 @@ export default function ContactPage() {
                     <input
                       type="text"
                       id="firstName"
-                      name="firstName" // Ensure 'name' attribute matches for form.elements.namedItem
-                      required
+                      name="firstName" // 'name' attribute is crucial for form submission
+                      required // Native HTML5 validation
                       className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       placeholder="Your first name"
                     />
@@ -103,8 +75,8 @@ export default function ContactPage() {
                     <input
                       type="text"
                       id="lastName"
-                      name="lastName" // Ensure 'name' attribute matches
-                      required
+                      name="lastName" // 'name' attribute is crucial for form submission
+                      required // Native HTML5 validation
                       className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       placeholder="Your last name"
                     />
@@ -116,10 +88,10 @@ export default function ContactPage() {
                     Email Address *
                   </label>
                   <input
-                    type="email"
+                    type="email" // Native HTML5 email validation
                     id="email"
-                    name="email" // Ensure 'name' attribute matches
-                    required
+                    name="email" // 'name' attribute is crucial for form submission
+                    required // Native HTML5 validation
                     className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="your.email@example.com"
                   />
@@ -130,10 +102,10 @@ export default function ContactPage() {
                     Phone Number *
                   </label>
                   <input
-                    type="tel"
+                    type="tel" // Native HTML5 tel validation
                     id="phone"
-                    name="phone" // Ensure 'name' attribute matches
-                    required
+                    name="phone" // 'name' attribute is crucial for form submission
+                    required // Native HTML5 validation
                     className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="(512) 555-0123"
                   />
@@ -145,7 +117,7 @@ export default function ContactPage() {
                   </label>
                   <select
                     id="service"
-                    name="service" // Ensure 'name' attribute matches
+                    name="service" // 'name' attribute is crucial for form submission
                     className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   >
                     <option value="">Select a service</option>
@@ -163,9 +135,9 @@ export default function ContactPage() {
                   </label>
                   <textarea
                     id="message"
-                    name="message" // Ensure 'name' attribute matches
+                    name="message" // 'name' attribute is crucial for form submission
                     rows={4}
-                    required
+                    required // Native HTML5 validation
                     className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Describe your plumbing issue..."
                   ></textarea>
@@ -174,16 +146,9 @@ export default function ContactPage() {
                 <Button 
                   type="submit" 
                   className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 text-white font-bold shadow-lg"
-                  disabled={status === 'Sending...'} // Disable button while sending
                 >
-                  {status === 'Sending...' ? 'Sending...' : 'Send Message'}
+                  Send
                 </Button>
-                
-                {status && (
-                  <p className={`mt-4 text-center ${status.includes('Error') ? 'text-red-400' : 'text-green-400'}`}>
-                    {status}
-                  </p>
-                )}
               </form>
             </div>
             
