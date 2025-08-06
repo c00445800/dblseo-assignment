@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 
 export default function LeakDetectionPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-gray-100 to-gray-50">
+    <div className="px-4 min-h-screen bg-gradient-to-br from-gray-50 via-gray-100 to-gray-50">
       <main className="container mx-auto px-4 py-20">
         {/* Hero Section */}
         <section className="text-center mb-16">

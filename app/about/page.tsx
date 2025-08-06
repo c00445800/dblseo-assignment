@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Shield, Clock, Phone, Users, Award } from "lucide-react";
@@ -19,10 +20,11 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-gray-100 to-gray-50">
-      <main className="container mx-auto px-4 py-20">
-        {/* Hero Section */}
-        <section className="text-center mb-16">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 px-4 via-gray-100 to-gray-50">
+    <main className="container mx-auto px-4 py-20">
+      {/* IMPROVED: Hero Section with a two-column layout for text and image */}
+      <section className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+        <div className="text-center lg:text-left">
           <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-400 to-blue-600 text-white text-sm font-bold rounded-full mb-4 shadow-lg">
             <Shield className="w-4 h-4 mr-2" />
             About Us
@@ -31,12 +33,29 @@ export default function AboutPage() {
             Austin&apos;s Trusted
             <span className="block text-blue-600">Plumbing Experts</span>
           </h1>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Since 2010, ABC Plumber has been serving Austin and surrounding areas with professional, 
-            reliable plumbing services. &apos; your local experts for all your residential plumbing needs.
+          <p className="text-lg text-gray-600 max-w-3xl lg:max-w-none mx-auto">
+            Since 2010, ABC Plumber has been serving Austin and surrounding areas with professional, reliable plumbing services. We're your local experts for all your residential plumbing needs.
           </p>
-        </section>
-
+        </div>
+        
+        {/* IMPROVED: Team Photo Section */}
+        <div className="relative w-full overflow-hidden rounded-2xl shadow-2xl transition-transform duration-300 hover:scale-105">
+          <div className="absolute inset-0 z-0 bg-gradient-to-br from-gray-800 to-gray-700 p-2 rounded-2xl">
+            {/* Optional: Add a subtle pipe-like border */}
+            <div className="absolute inset-0 m-1 rounded-xl border border-gray-600"></div>
+          </div>
+          <Image
+            src="/assets/plumbers.webp"
+            alt="Team of Plumbers"
+            className="relative z-10 w-full h-full object-cover rounded-xl"
+            priority
+            width={1200}
+            height={800} // Adjust dimensions for a landscape team photo
+            quality={90}
+          />
+        </div>
+      </section>
+      
         {/* Story Section */}
         <section className="mb-20">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
